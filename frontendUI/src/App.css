@@ -4,13 +4,13 @@
 }
 
 .header {
-  height: 80px;
+  height: 65px;
   width: calc(100vw - 100px);
   display: flex;
   justify-content: flex-start;
-  background-color: rgb(33, 33, 38);
-  border-bottom: 1px solid rgb(121, 121, 121);
-  padding: 5px 50px;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(17, 40, 93);
+  padding: 5.5px 50px;
   align-items: center;
 }
 
@@ -30,10 +30,10 @@
 }
 
 .content {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 100px;
-  background: linear-gradient(180deg, rgba(142, 211, 182, 0.3) 0%, rgba(36,20,0,0) 50%);
+  background: linear-gradient(180deg, rgba(27, 159, 235, 0.751) 0%, rgb(0, 0, 0) 50%);
 }
 
 .walletInfo {
@@ -45,15 +45,15 @@
   width: 350px;
   height: 150px;
   padding: 10px 30px; 
-  border-radius: 20px;
-  background-color: rgba(33, 33, 38, 0.6);
+  border-radius: 10px;
+  background-color: rgba(7, 7, 14, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .tabHeading {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   margin: 20px 0px;
   align-items: center;
@@ -72,11 +72,11 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: rgb(255, 255, 255);
   gap: 5px;
-  background-color: rgb(42, 42, 47);
-  border-radius: 5px;
-  padding: 10px;
+  background-color: rgb(9, 9, 28);
+  border-radius: 0.5px;
+  padding: 5px;
 }
 
 .nftList {
@@ -85,3 +85,28 @@
   gap: 40px;
   flex-wrap: wrap;
 }
+
+/* .tab-list {
+  font-size: 20px;
+}
+
+.table-list {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.table-list th, .table-list td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.table-list th {
+  background-color: #333;
+  color: white;
+  text-align: left;
+} */

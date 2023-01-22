@@ -41,7 +41,7 @@ function Tokens({ wallet, chain, tokens, setTokens }) {
           noPagination={true}
           style={{ width: "900px" }}
           columnsConfig="300px 300px 250px"
-          data={tokens.map((e) => [e.symbol, e.bal, `$${e.val}`] )}
+          data={Array.isArray(tokens) ? tokens.map((e) => [e.symbol, e.bal, `$${e.val}`] ) : []}
           header={[
             <span>Currency</span>,
             <span>Balance</span>,

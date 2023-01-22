@@ -1,13 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../App.css";
 import {Input, Select, CryptoLogos} from '@web3uikit/core'
 
 function WalletInputs({chain, wallet, setChain, setWallet}) {
+  useEffect(()=>{
+    setWallet('0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d');
+  },[])
   return (
     <>
     <div className="header">
       <div className="title">
-      <svg width="314" height="114" viewBox="0 0 514 274" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="230" height="84" viewBox="0 0 514 274" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M50.3466 185.432V138.098H52.75C71.8437 138.098 78.6533 131.411 78.6533 112.267C78.6533 87.8793 65.8352 86.5681 51.4147 86.5681H41V185.432H50.3466ZM50.3466 94.9597H52.2159C65.3011 94.9597 69.0397 98.631 69.0397 112.267C68.6391 124.986 67.0369 129.706 53.9517 129.706H50.3466V94.9597Z" fill="url(#paint0_linear_97_321)"/>
 <path d="M124.905 86.5681H115.559V185.432H146.803V177.04H124.905V86.5681Z" fill="url(#paint1_linear_97_321)"/>
 <path d="M202.074 86.5681H193.261L173.5 185.432H183.514L187.119 165.108H208.483L212.222 185.432H222.236L202.074 86.5681ZM188.722 157.11L194.597 119.217C195.665 112.53 196.332 105.711 197.267 99.0244H197.801C198.602 105.711 199.136 112.53 200.338 119.217L207.014 157.11H188.722Z" fill="url(#paint2_linear_97_321)"/>

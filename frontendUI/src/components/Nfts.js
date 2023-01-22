@@ -94,7 +94,7 @@ function Nfts({ chain, wallet, filteredNfts, setFilteredNfts, nfts, setNfts }) {
       <Input
           id="NameF"
           label="Name Filter"
-          labelBgColor="rgb(33, 33, 38)"
+          labelBgColor="rgb(0, 0, 55)"
           value={nameFilter}
           style={{}}
           onChange={(e) => setNameFilter(e.target.value)}
@@ -102,7 +102,7 @@ function Nfts({ chain, wallet, filteredNfts, setFilteredNfts, nfts, setNfts }) {
         <Input
           id="IdF"
           label="Id Filter"
-          labelBgColor="rgb(33, 33, 38)"
+          labelBgColor="rgb(0, 0, 55)"
           value={idFilter}
           style={{}}
           onChange={(e) => setIdFilter(e.target.value)}
@@ -115,7 +115,7 @@ function Nfts({ chain, wallet, filteredNfts, setFilteredNfts, nfts, setNfts }) {
             return (
               <>
                 <div className="nftInfo">
-                {e.image && <img src={e.image} width={200} />}
+                {e.image && <img src={e.image} width={230} />}
                 
                 <div>Name: {e.name}, </div>
                 <div>(ID: {e.token_id.slice(0,5)})</div>

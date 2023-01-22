@@ -19,7 +19,7 @@ function PortfolioValue({ tokens, nativeValue }) {
   return (
     <>
     <div className="totalValue">
-      <h3>Portfolio Total Value</h3>
+      <h3>TOTAL PORTFOLIO</h3>
       <h2>
        ${totalValue}
       </h2>

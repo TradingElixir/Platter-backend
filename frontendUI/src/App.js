@@ -32,8 +32,8 @@ function App() {
           {wallet.length === 42 && (
             <>
               <div>
-                <Avatar isRounded size={130} theme="image" />
-                <h2>{`${wallet.slice(0, 6)}...${wallet.slice(36)}`}</h2>
+                <Avatar isRounded size={130}  image="https://nftcoders.com/avatar/avatar-cool.svg" theme="image" />
+                <h3>{`${wallet.slice(0, 6)}...${wallet.slice(36)}`}</h3>
               </div>
               <PortfolioValue
                 nativeValue={nativeValue}
@@ -43,8 +43,8 @@ function App() {
           )}
         </div>
 
-        <TabList>
-          <Tab tabKey={1} tabName={"Tokens"}>
+        <TabList className="tab-list">
+          <Tab tabKey={1} tabName={"TOKENS"}>
             <NativeTokens
               wallet={wallet}
               chain={chain}
@@ -60,7 +60,7 @@ function App() {
               setTokens={setTokens}
             />
           </Tab>
-          <Tab tabKey={2} tabName={"Transfers"}>
+          <Tab tabKey={2} tabName={"TRANSFERS"}>
             <TransferHistory 
               chain={chain} 
               wallet={wallet} 
@@ -68,7 +68,7 @@ function App() {
               setTransfers={setTransfers}
             />
           </Tab>
-          <Tab tabKey={3} tabName={"NFT's"}>
+          <Tab tabKey={3} tabName={"NFT'S"}>
             <Nfts 
               wallet={wallet} 
               chain={chain} 

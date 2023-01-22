@@ -78,7 +78,7 @@ app.get("/tokenBalances", async (req, res) => {
             chain: chain,
           });
 
-          if (priceResponse.raw.usdPrice > 0.01) {
+          if (priceResponse.raw.usdPrice > 0.001) {
             return {
               ...token,
               usd: priceResponse.raw.usdPrice
