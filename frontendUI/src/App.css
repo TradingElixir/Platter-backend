@@ -86,27 +86,7 @@
   flex-wrap: wrap;
 }
 
-/* .tab-list {
+.tab-list {
   font-size: 20px;
 }
 
-.table-list {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 18px;
-  color: white;
-  background-color: black;
-  border: 1px solid #ccc;
-  margin-top: 10px;
-}
-
-.table-list th, .table-list td {
-  border: 1px solid #ccc;
-  padding: 8px;
-}
-
-.table-list th {
-  background-color: #333;
-  color: white;
-  text-align: left;
-} */

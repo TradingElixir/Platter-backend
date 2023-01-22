@@ -28,6 +28,7 @@ function TransferHistory({ chain, wallet, transfers, setTransfers }) {
         {transfers.length > 0 && (
           <Table
             pageSize={8}
+            
             noPagination={false}
             style={{ width: "90vw" }}
             columnsConfig="16vw 18vw 18vw 18vw 16vw"
