@@ -11,13 +11,11 @@ import { Avatar, TabList, Tab } from "@web3uikit/core";
 function App() {
   const [wallet, setWallet] = useState("");
   const [chain, setChain] = useState("0x1");
-  const [nativeBalance, setNativeBalance] = useState(0);
-  const [nativeValue, setNativeValue] = useState(0);
+  const [nativeBalances, setNativeBalances] = useState([]);
   const [tokens, setTokens] = useState([]);
   const [nfts, setNfts] = useState([]);
   const [filteredNfts, setFilteredNfts] = useState([]);
   const [transfers, setTransfers] = useState([]);
-
 
   return (
     <div className="App">
@@ -36,7 +34,6 @@ function App() {
                 <h3>{`${wallet.slice(0, 6)}...${wallet.slice(36)}`}</h3>
               </div>
               <PortfolioValue
-                nativeValue={nativeValue}
                 tokens={tokens}
               />
             </>
@@ -45,14 +42,12 @@ function App() {
 
         <TabList className="tab-list">
           <Tab tabKey={1} tabName={"TOKENS"}>
-            <NativeTokens
-              wallet={wallet}
-              chain={chain}
-              nativeBalance={nativeBalance}
-              setNativeBalance={setNativeBalance}
-              nativeValue={nativeValue}
-              setNativeValue={setNativeValue}
+          <NativeTokens
+            wallet={wallet}
+            nativeBalances={nativeBalances}
+            setNativeBalances={setNativeBalances}
             />
+
             <Tokens
               wallet={wallet}
               chain={chain}

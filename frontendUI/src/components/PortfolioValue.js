@@ -2,28 +2,39 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "../App.css";
 
-function PortfolioValue({ tokens, nativeValue }) {
+function PortfolioValue({ tokens, nativeBalances }) {
   const [totalValue, setTotalValue] = useState(0);
 
-
+  console.log({ tokens, nativeBalances });
+  
   useEffect(() => {
-    let val = 0;
-    for (let i = 0; i < tokens.length; i++) {
-      val = val + Number(tokens[i].val);
-    }
-    val = val + Number(nativeValue);
+    if (Array.isArray(tokens) && Array.isArray(nativeBalances)) {
 
-    setTotalValue(val.toFixed(2));
-  }, [nativeValue, tokens]);
+      let val = 0;
+      for (let i = 0; i < tokens.length; i++) {
+        val = val + Number(tokens[i].val);
+      }
+
+      let val1 = 0;
+      for (let i = 0; i < nativeBalances.length; i++) {
+        val1 = val1 + Number(nativeBalances[i].nativeValue);
+      }
+
+      let val2 = 0;
+      val2 = val1 + val;
+
+      setTotalValue(val2.toFixed(2));
+    }
+  }, [nativeBalances, tokens]);
 
   return (
     <>
-    <div className="totalValue">
-      <h3>TOTAL PORTFOLIO</h3>
-      <h2>
-       ${totalValue}
-      </h2>
-    </div>
+      <div className="totalValue">
+        <h3>TOTAL PORTFOLIO</h3>
+        <h2>
+          ${totalValue}
+        </h2>
+      </div>
     </>
   );
 }

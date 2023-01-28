@@ -3,13 +3,13 @@ import axios from "axios";
 import { Table } from "@web3uikit/core";
 import { Reload } from "@web3uikit/icons";
 
-function Tokens({ wallet, chain, tokens, setTokens }) {
+function Tokens({ wallet, tokens, setTokens }) {
 
   async function getTokenBalances() {
     const response = await axios.get("http://localhost:8080/tokenBalances", {
       params: {
         address: wallet,
-        chain: chain,
+       
       },
     });
 
@@ -20,7 +20,7 @@ function Tokens({ wallet, chain, tokens, setTokens }) {
 
   function tokenProcessing(t) {
 
-    
+    if(Array.isArray(t)){
     for (let i = 0; i < t.length; i++) {
       t[i].bal = (Number(t[i].balance) / Number(`1E${t[i].decimals}`)).toFixed(3); //1E18
       t[i].val = ((Number(t[i].balance) / Number(`1E${t[i].decimals}`)) *Number(t[i].usd)).toFixed(2);
@@ -28,19 +28,19 @@ function Tokens({ wallet, chain, tokens, setTokens }) {
 
     setTokens(t);
 
-    
+  }
   }
 
   return (
     <>
-      <div className="tabHeading">ERC20 Tokens <Reload onClick={getTokenBalances}/></div>
+      <div className="tabHeading">ERC20 Tokens <Reload onClick={getTokenBalances}/>
 
       {tokens.length > 0 && (
         <Table
           pageSize={6}
           noPagination={true}
-          style={{ width: "900px" }}
-          columnsConfig="300px 300px 250px"
+          style={{ width: "1200px" }}
+          columnsConfig="300px 300px 300px 300px"
           data={Array.isArray(tokens) ? tokens.map((e) => [e.symbol, e.bal, `$${e.val}`] ) : []}
           header={[
             <span>Currency</span>,
@@ -49,6 +49,7 @@ function Tokens({ wallet, chain, tokens, setTokens }) {
           ]}
         />
       )}
+      </div>
     </>
   );
 }
