@@ -33,14 +33,14 @@ function Tokens({ wallet, tokens, setTokens }) {
 
   return (
     <>
-      <div className="tabHeading">ERC20 Tokens <Reload onClick={getTokenBalances}/>
+      <div className="tabHeading">ERC20 Coins<Reload onClick={getTokenBalances}/>
 
       {tokens.length > 0 && (
         <Table
           pageSize={6}
           noPagination={true}
-          style={{ width: "1200px" }}
-          columnsConfig="300px 300px 300px 300px"
+          style={{ width: "927px" }}
+          columnsConfig="300px 300px 300px"
           data={Array.isArray(tokens) ? tokens.map((e) => [e.symbol, e.bal, `$${e.val}`] ) : []}
           header={[
             <span>Currency</span>,

@@ -12,7 +12,7 @@ function NativeTokens({wallet, nativeBalances, setNativeBalances}) {
           address: wallet
         }
       });
-      console.log({response: response.data.nativeBalances});
+      console.log({responses: response.data.nativeBalances});
       if(response.data){
         setNativeBalances(response?.data?.nativeBalances ?? []);
       }
@@ -29,15 +29,15 @@ function NativeTokens({wallet, nativeBalances, setNativeBalances}) {
         <Table
           pageSize={6}
           noPagination={true}
-          style={{width:"1200px"}}
-          columnsConfig="300px 300px 300px 300px"
+          style={{width:"927px"}}
+          columnsConfig="300px 300px 300px "
           data={nativeBalances.map((item)=>Object.values(item))}
           
           header={[
             <span>NativeToken</span>,
             <span>Price</span>,
             <span>Value</span>,
-            <span>Chain</span>,
+            
           ]}
         />
       )}
