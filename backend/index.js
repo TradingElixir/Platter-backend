@@ -118,7 +118,7 @@ app.get("/tokenBalances", async (req, res) => {
   
   const tokensWithUsdPromise = await Promise.all(
     tokens.map(async (token) => {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       if (!tokenPrices[token.token_address]) {
         try {
           const priceResponse = await Moralis.EvmApi.token.getTokenPrice({
