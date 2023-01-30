@@ -35,6 +35,7 @@ function App() {
               </div>
               <PortfolioValue
                 tokens={tokens}
+                nativeBalances={nativeBalances}
               />
             </>
           )}
