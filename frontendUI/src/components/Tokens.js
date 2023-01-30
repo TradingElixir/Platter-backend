@@ -33,7 +33,7 @@ function Tokens({ wallet, tokens, setTokens }) {
 
   return (
     <>
-      <div className="tabHeading">ERC20 Coins<Reload onClick={getTokenBalances}/>
+      <div className="tabHeading">ERC20 Coins <Reload onClick={getTokenBalances}/>
 
       {tokens.length > 0 && (
         <Table
