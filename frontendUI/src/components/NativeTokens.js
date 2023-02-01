@@ -29,14 +29,15 @@ function NativeTokens({wallet, nativeBalances, setNativeBalances}) {
         <Table
           pageSize={6}
           noPagination={true}
-          style={{width:"927px"}}
-          columnsConfig="300px 300px 300px "
+          style={{width:"1035px"}}
+          columnsConfig="300px 300px 300px 100px "
           data={nativeBalances.map((item)=>Object.values(item))}
           
           header={[
             <span>NativeToken</span>,
             <span>Price</span>,
             <span>Value</span>,
+            <span>Chain</span>,
             
           ]}
         />

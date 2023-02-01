@@ -61,6 +61,7 @@ app.get("/nativeBalances", async (req, res) => {
         balance: Number(newBalance.toFixed(3)),
         usd: Number(nativePrice.raw.usdPrice.toFixed(2)),
         nativeValue,
+        chain,
         
       };
     }));
@@ -133,6 +134,7 @@ app.get("/tokenBalances", async (req, res) => {
       }
       return {
         ...token,
+        chain: token.chain,
         usd: tokenPrices[token.token_address] || 0
       };
     })

@@ -39,13 +39,14 @@ function Tokens({ wallet, tokens, setTokens }) {
         <Table
           pageSize={6}
           noPagination={true}
-          style={{ width: "927px" }}
-          columnsConfig="300px 300px 300px"
-          data={Array.isArray(tokens) ? tokens.map((e) => [e.symbol, e.bal, `$${e.val}`] ) : []}
+          style={{ width: "1035px" }}
+          columnsConfig="300px 300px 300px 100px"
+          data={Array.isArray(tokens) ? tokens.map((e) => [e.symbol, e.bal, `$${e.val}`,e.chain] ) : []}
           header={[
             <span>Currency</span>,
             <span>Balance</span>,
             <span>Value</span>,
+            <span>Chain</span>,
           ]}
         />
       )}
